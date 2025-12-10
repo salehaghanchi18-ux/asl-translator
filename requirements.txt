@@ -1,6 +1,7 @@
 flask
 gunicorn
-
 torch
 joblib
+numpy
 pyttsx3
+opencv-python-headless
