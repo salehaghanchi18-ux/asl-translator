@@ -1,7 +1,6 @@
 streamlit
-mediapipe
+mediapipe==0.10.9
 torch
 joblib
 numpy
 opencv-python
-pyttsx3
