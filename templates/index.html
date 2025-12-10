@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>ASL Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+  </head>
+  <body>
+    <div class="container">
+      <h1>ASL Translator</h1>
+
+      <div class="video-wrapper">
+        <img id="stream" src="{{ url_for('video_feed') }}" alt="ASL Live Stream"/>
+        <div id="status-banner"><span id="status-text">Loading…</span></div>
+      </div>
+
+      <div class="metrics">
+        <div><strong>Letter:</strong> <span id="label">-</span></div>
+        <div><strong>Conf:</strong> <span id="conf">0.00</span></div>
+        <div><strong>Top2:</strong> <span id="top2">- 0.00</span></div>
+        <div><strong>Margin:</strong> <span id="margin">0.00</span></div>
+      </div>
+
+      <div class="text-box">
+        <label><strong>Text:</strong></label>
+        <div id="buffer-text" aria-live="polite"></div>
+      </div>
+
+      <div class="controls">
+        <button id="confirm">Confirm</button>
+        <button id="speak">Speak</button>
+        <button id="backspace">Backspace</button>
+        <button id="clear">Clear</button>
+      </div>
+
+      <p class="shortcuts">Enter = confirm | Space = speak | B = backspace | C = clear</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

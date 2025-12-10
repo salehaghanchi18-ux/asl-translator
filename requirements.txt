@@ -1,0 +1,6 @@
+flask
+gunicorn
+mediapipe
+torch
+joblib
+pyttsx3

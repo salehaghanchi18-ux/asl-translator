@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ASL Translator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to ASL Translator</h1>
+    <img src="{{ url_for('static', filename='asl_chart.png') }}" alt="ASL Chart" class="guide-img">
+    <a href="/translate" class="next-button">Next</a>
+  </div>
+</body>
+</html>
