@@ -8,6 +8,7 @@ import torch.nn.functional as F
 from collections import deque
 from train_alphabet_model import GestureNet
 import pyttsx3
+import os   # ✅ Added for Render PORT
 
 app = Flask(__name__)
 
@@ -169,5 +170,6 @@ def speak():
         tts_engine.runAndWait()
     return jsonify({"ok": True})
 
+# ✅ Render-compatible run
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
