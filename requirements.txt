@@ -1,7 +1,7 @@
-flask
-gunicorn
+streamlit
+mediapipe
 torch
 joblib
 numpy
+opencv-python
 pyttsx3
-opencv-python-headless
